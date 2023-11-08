@@ -39,5 +39,5 @@ def most_3_recent__release():
 
 
 if __name__=='__main__':
-  app.run(debug=True, port=os.environ.get('PORT') )
+  app.run(debug=True, port=os.environ.get('PORT',5000) )
 
