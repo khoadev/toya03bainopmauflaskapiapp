@@ -17,7 +17,7 @@ from flask import Flask, jsonify
 import os
 from dotenv import load_dotenv
 #
-from helper import github_request
+from src.helper import github_request
 load_dotenv()
 
 app = Flask(__name__)
