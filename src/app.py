@@ -23,17 +23,17 @@ load_dotenv()
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def index():
   return {}
 
 
-@app.route('/release')
+@app.route('/release',methods=['GET'])
 def release():
   return github_request(f'https://api.github.com/repos/{os.environ.get("OWNER")}/{os.environ.get("REPO")}/releases')
 
 
-@app.route('/most_3_recent/release')
+@app.route('/most_3_recent/release',methods=['GET'])
 def most_3_recent__release():
   return github_request(f'https://api.github.com/repos/{os.environ.get("OWNER")}/{os.environ.get("REPO")}/releases?per_page=3')
 
